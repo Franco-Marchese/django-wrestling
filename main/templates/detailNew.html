@@ -1,0 +1,19 @@
+{% extends 'layout/nav_footer.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="news-deck">
+    <div class="news-detailed">
+        <div class="text">
+            <h3>{{ news.title }}</h3>
+            <span>{{ news.article }}</span>
+        </div>
+        <div class="img-box">
+            <img src="{{ news.img }}" alt="img">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

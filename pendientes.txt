@@ -1,0 +1,3 @@
+11/20/2022:
+	- Diseñar relacion de carpetas para fotos subidas.
+	- Modificar "upload_to" en modelos de base de datos.

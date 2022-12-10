@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'main.css' %}"/>
+    </head>
+    <body>
+        <div>
+            <div class="navBar">
+                <div class="logoHome">
+                    <span>
+                        {% comment %} <img src="{% static 'blueLine.jpg' %}" alt="img_home"/> {% endcomment %}
+                        <a href="/">WEICHAN</a>
+                    </span>
+                </div>
+                <div class="wrapperLogo">
+                    <h2>Menu</h2>
+                    <div class="logoMenu">
+                        <label for="toggle">
+                            <img src="{% static 'menuC.png' %}" alt="img_menu"/>
+                        </label>
+                        <input id="toggle" class= "toggled" type="checkbox" />
+                        <div class="dropdown">
+                            <ul>
+                                <li><a href="/#¿Quiénes somos?">¿Quiénes somos?</a></li>
+                                <li><a href="/#Horarios y talleres.">Horarios y talleres</a></li>
+                                <li><a href="/#Noticias y eventos.">Noticias y eventos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            
+            {% block content %}
+            {% endblock %}
+        </div>
+        
+        
+        <div class="footer">
+            <div class="RRSS">
+                <p>Pronto: nuestras redes sociales!</p>
+            </div>
+            <div class="contacto">
+                <p>Pronto: un correo para todas tus preguntas!</p>
+                <a href="/admin">Acceso entrenador</a>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,111 @@
+{% extends 'layout/nav_footer.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% comment %} Start section "About us" {% endcomment %}
+
+<div class="main-block">
+    <div class="intro-block">
+            {% for e in club %}
+            <div class="text-block">
+                    <span>{{ e.titleIntro }}</span>
+                    <p>
+                        <i>{{ e.intro }}</i>
+                    </p>
+                </div>      
+            </div>
+            <div class="about-block">
+                <div class="text-block">
+                    <span id="¿Quiénes somos?">Misión.</span>
+                    <p>
+                        {{ e.mision }}
+                    </p>
+                    <span class="¿Quiénes somos?">Visión.</span>
+                    <p>
+                        {{ e.vision }}
+                    </p>
+                </div>
+                <div class="gallery-block">
+                    <img src="" alt="gallery"/>
+                </div>
+
+            {% endfor %}
+    </div>
+</div>
+
+{% comment %} End section "About us" {% endcomment %}
+
+{% comment %} Start section "Division" {% endcomment %}
+
+<div class="main-block-2">
+    <h2 id="Horarios y talleres.">
+        Horarios y talleres.
+    </h2>
+    <div class="side-table">
+        <div class="deck-block">
+            <p class="intro">Aquí puedes inscribirte. Descubre además nuestras ubicaciones y horarios.</p>
+            <div class="deck">
+
+            {% for e in divisions %}
+    
+                <div class="card">
+                    <span class="title-box">
+                        <p class="title-1">WEICHAN</p>
+                        <p class="title-2">/</p>
+                        <p class="title-3"><i>{{ e.type }}</i></p>
+                    </span>
+                    <span class="schedule">
+                        <p>{{ e.days }}:</p>
+                        <p>{{ e.hours }}</p>
+                    </span>
+                    <span class="btns">
+                        <a href="{{ e.register }}" class="btn" target="_blank">Registrarse</a>
+                        <a href="{{e.location.location}}" class="btn" target="_blank">Ver en mapa</a>
+                    </span>
+                </div>
+    
+            {% endfor %}
+            
+            </div>
+        </div>
+        <div class="img-block">
+            <img src="{{ club.imgSchedule.url }}" alt="img"/>
+        </div>
+    </div>
+</div>
+
+{% comment %} End section "Division" {% endcomment %}
+
+{% comment %} Start section "News and events" {% endcomment %}
+
+<div class="main-block-2">
+    <h2 id="Noticias y eventos.">Noticias y eventos.</h2>
+    <div class="side-table">
+        <div class="news-block">
+            <p> Aquí puedes ver los últimos anuncios del club. Puedes hacer click en los títulos para leer más.</p>
+            <div class="news-belt">
+    
+            {% for e in news %}
+    
+            <div class="news">
+                <span>
+                    <img src="{% static 'megafono.png' %}" alt="img"/>
+                    <h3><a href="{% url 'noticia' e.id %}" target="_blank">{{ e.title }}</a></h3>
+                </span>
+                <p><i> {{e.date}} </i></p>
+            </div>
+    
+            {% endfor %}
+            </div>
+        </div>
+        <div class="calendar-block">
+            <img src="{{ club.imgEvents.url }}" alt="img"/>
+        </div>
+    </div>
+</div>
+
+{% comment %} End section "News and events" {% endcomment %}
+
+{% endblock %}
