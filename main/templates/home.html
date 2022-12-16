@@ -28,7 +28,7 @@
                     </p>
                 </div>
                 <div class="gallery-block">
-                    <img src="" alt="gallery"/>
+                    <img src="{% static 'logoWeichan.jpeg' %}" alt="gallery"/>
                 </div>
 
             {% endfor %}
@@ -40,9 +40,12 @@
 {% comment %} Start section "Division" {% endcomment %}
 
 <div class="main-block-2">
-    <h2 id="Horarios y talleres.">
-        Horarios y talleres.
-    </h2>
+    <span>
+        <img class='logo-titulo' src="{% static 'menuLogo.png' %}" alt="img"/>
+        <h2 id="Horarios y talleres.">
+            Horarios y talleres.
+        </h2>
+    </span>
     <div class="side-table">
         <div class="deck-block">
             <p class="intro">Aquí puedes inscribirte. Descubre además nuestras ubicaciones y horarios.</p>
@@ -71,7 +74,7 @@
             </div>
         </div>
         <div class="img-block">
-            <img src="{{ club.imgSchedule.url }}" alt="img"/>
+            <img src="{% static 'horarios_muestra.jpg' %}" alt="img"/>
         </div>
     </div>
 </div>
@@ -81,7 +84,12 @@
 {% comment %} Start section "News and events" {% endcomment %}
 
 <div class="main-block-2">
-    <h2 id="Noticias y eventos.">Noticias y eventos.</h2>
+    <span>
+        <img class='logo-titulo' src="{% static 'menuLogo.png' %}" alt="img"/>
+        <h2 id="Noticias y eventos.">
+            Noticias y eventos.
+        </h2>
+    </span>
     <div class="side-table">
         <div class="news-block">
             <p> Aquí puedes ver los últimos anuncios del club. Puedes hacer click en los títulos para leer más.</p>
@@ -101,7 +109,7 @@
             </div>
         </div>
         <div class="calendar-block">
-            <img src="{{ club.imgEvents.url }}" alt="img"/>
+            <img src="{% static 'calendario_ejemplo.jpg' %}" alt="img"/>
         </div>
     </div>
 </div>

@@ -5,7 +5,7 @@ class NEWS(models.Model):
     title = models.CharField(default="VACIO",null=False,max_length=200)
     article = models.CharField(max_length=1000)
     date = models.DateField()
-    img = models.ImageField(null=True)
+    # img = models.ImageField(null=True)
 
     def __str__(self):
         return "Titulo: {} Fecha: {}".format(self.title,self.date)

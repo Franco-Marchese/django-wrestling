@@ -156,8 +156,19 @@ body {
 }
 
 .main-block-2 h2{
-    margin: .8em .8em;
+    margin: .8em .3em;
     color: var(--lettersB);
+}
+
+.main-block-2 span {
+    display: flex;
+    flex-direction: row;
+    margin: .8em 0 0 .8em
+}
+
+.logo-titulo {
+    width: 3.2em;
+    height: 3.2em;
 }
 
 .intro-block {
@@ -351,6 +362,7 @@ body {
     gap: .5em;
     margin: 0 .5em;
     height: inherit;
+    width: 85%;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
 }
@@ -361,7 +373,6 @@ body {
     display: grid;
     grid-template-rows: 90% 10%;
     padding: .8em;
-    min-width: 23%;
     align-items: center;
     text-align: center;
     scroll-snap-align: center;
@@ -375,8 +386,8 @@ body {
 }
 
 .news span img {
-    height: 2em;
-    width: 2em;
+    height: 2.5em;
+    width: 2.5em;
 }
 
 .news span a {
@@ -407,6 +418,10 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: .5em;
+}
+
+.text {
+    margin: .8em 0 0 .8em;
 }
 
 .img-box {
