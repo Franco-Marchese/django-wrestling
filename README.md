@@ -60,7 +60,7 @@ As seen above, here we can distinguish three main elements: a brief introduction
 - The image gives information about pre programmed activities.
   
 ## Footer.
-<image src="/photos/footerBlock.png" alt="navbar">
+<image src="/photos/footer.png" alt="navbar">
   
 Here is how the end of the page looks like, it supposed to have links to the social media of the club and contact information.
   
