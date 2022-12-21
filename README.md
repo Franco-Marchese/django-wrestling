@@ -15,3 +15,6 @@ This is the result of a integrated web with, mainly, django. The purpose is to h
     - Cards.
     - Detailed new.
 - Footer.
+
+# Navbar.
+<image src="/photos/firstNavbar.png" alt="navbar">
