@@ -13,4 +13,5 @@ This is the result of a integrated web with, mainly, django. The purpose is to h
     - Cards.
   - News section.
     - Cards.
+    - Detailed new.
 - Footer.
